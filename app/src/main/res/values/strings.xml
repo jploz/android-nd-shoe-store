@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">Shoes</string>
+    <string name="emailTextFieldLabel">Email</string>
+    <string name="passwordTextFieldLabel">Password</string>
+    <string name="loginBtnText">Login</string>
+    <string name="appTitleLogin">Shoe Store Inventory</string>
+    <string name="app_logo_description">Image of app logo</string>
+    <string name="no_account_yet">No account yet?</string>
+    <string name="create_one_btn_text">Create one</string>
+    <string name="welcome">Welcome!</string>
+    <string name="what_is_shoes_summary">Shoes helps you to organize the inventory of your shoe store.</string>
+    <string name="next_btn_text">Next</string>
+    <string name="details_screen_description">Selecting a shoe shows you detailed information about it.</string>
+    <string name="overview_screen_description">The overview screen lists all of your shoes at a glance.</string>
 </resources>
