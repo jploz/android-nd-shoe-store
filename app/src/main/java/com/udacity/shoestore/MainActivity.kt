@@ -23,7 +23,13 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         val appBarConfiguration =
-            AppBarConfiguration(setOf(R.id.loginFragment, R.id.welcomeFragment))
+            AppBarConfiguration(
+                setOf(
+                    R.id.loginFragment,
+                    R.id.welcomeFragment,
+                    R.id.shoesListFragment
+                )
+            )
         findViewById<Toolbar>(R.id.toolbar)
             .setupWithNavController(navController, appBarConfiguration)
     }

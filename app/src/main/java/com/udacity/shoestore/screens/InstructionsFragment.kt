@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
-import timber.log.Timber
 
 class InstructionsFragment : Fragment() {
 
@@ -21,7 +21,7 @@ class InstructionsFragment : Fragment() {
         )
 
         binding.nextBtn.setOnClickListener {
-            Timber.i("Instructions fragment: next button clicked")
+            findNavController().navigate(R.id.action_instructionsFragment_to_shoesListFragment)
         }
 
         return binding.root
