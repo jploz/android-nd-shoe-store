@@ -31,4 +31,7 @@
     <string name="save_button_text">Save</string>
     <string name="shoe_inventory_title">Shoe Inventory</string>
     <string name="add_shoe_title">Add shoe</string>
+    <string name="add_predefined_shoes_menu_label">Add predefined shoes</string>
+    <string name="clear_shoe_inventory_menu_label">Clear shoe inventory</string>
+    <string name="not_avail">n.a.</string>
 </resources>
