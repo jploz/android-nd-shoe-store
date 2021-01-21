@@ -28,3 +28,15 @@ fun getText(view: TextInputEditText): Double {
         0.0
     }
 }
+
+@Suppress("unused")
+@BindingAdapter("shoeSizeFormatted")
+fun TextView.setShoeSizeFormatted(item: Double?) {
+    item?.let {
+        text = if (item > 0.0) {
+            item.toString()
+        } else {
+            context.getString(R.string.not_avail)
+        }
+    }
+}
