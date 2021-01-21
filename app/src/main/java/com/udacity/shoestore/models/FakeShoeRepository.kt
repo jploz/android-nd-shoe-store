@@ -2,7 +2,7 @@ package com.udacity.shoestore.models
 
 class FakeShoeRepository {
 
-    private fun getPredefinedShoes() =
+    fun getPredefinedShoes() =
         listOf<Shoe>(
             Shoe(
                 "City Comfort",

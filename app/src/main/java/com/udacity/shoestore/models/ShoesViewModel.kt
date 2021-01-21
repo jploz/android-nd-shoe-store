@@ -9,8 +9,12 @@ class ShoesViewModel : ViewModel() {
     private val _shoes = MutableLiveData<MutableList<Shoe>>()
     val shoes: LiveData<MutableList<Shoe>> = _shoes
 
+    var predefinedDataIsLoaded = false
+
+    private val repository = FakeShoeRepository()
+
     init {
-        _shoes.value = mutableListOf<Shoe>()
+        _shoes.value = mutableListOf()
     }
 
     companion object {
@@ -19,9 +23,21 @@ class ShoesViewModel : ViewModel() {
 
     fun addShoe(shoe: Shoe) {
         _shoes.value?.add(0, shoe)
+        _shoes.forceRefresh()
     }
 
-    fun addShoes(shoes: List<Shoe>) {
-        _shoes.value?.addAll(0, shoes)
+    fun addPredefinedShoes() {
+        _shoes.value?.addAll(repository.getPredefinedShoes())
+        _shoes.forceRefresh()
+        predefinedDataIsLoaded = true
     }
+
+    fun clearShoesList() {
+        _shoes.value?.clear()
+        _shoes.forceRefresh()
+    }
+}
+
+fun <T> MutableLiveData<T>.forceRefresh() {
+    this.value = this.value
 }
