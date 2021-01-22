@@ -15,7 +15,7 @@
             android:layout_marginStart="48dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="48dp"
-            android:text="No shoes in inventory. Use 'Plus' button to add a pair or load some predefined shoes using the entry in the overflow menu."
+            android:text="@string/shoes_list_empty_infotext"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"

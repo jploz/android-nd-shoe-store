@@ -22,7 +22,7 @@ class ShoesListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding: FragmentShoesListBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoes_list, container, false
         )

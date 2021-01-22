@@ -5,6 +5,5 @@
     <color name="colorAccent">#e486eb</color>
 
     <color name="textColorPrimary">#000000</color>
-    <color name="toolbarIconColor">@color/textColorPrimary</color>
     <color name="textInputOutlineColor">@color/colorPrimary</color>
 </resources>
