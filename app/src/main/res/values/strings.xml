@@ -11,7 +11,6 @@
     <string name="next_btn_text">Next</string>
     <string name="details_screen_description">Selecting a shoe shows you detailed information about it.</string>
     <string name="overview_screen_description">The overview screen lists all of your shoes at a glance.</string>
-    <!-- Strings related to login -->
     <string name="made_by_label">by</string>
     <string name="shoe_size_label">Size</string>
     <string name="add_new_shoe_button_descr">Add new shoe button</string>

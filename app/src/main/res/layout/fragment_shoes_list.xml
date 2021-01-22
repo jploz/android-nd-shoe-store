@@ -32,7 +32,6 @@
             app:layout_constraintTop_toTopOf="parent">
 
 
-
             <LinearLayout
                 android:id="@+id/shoes_list_layout"
                 android:layout_width="match_parent"
