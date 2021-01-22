@@ -12,7 +12,6 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoesListBinding
 import com.udacity.shoestore.databinding.ListitemShoeBinding
 import com.udacity.shoestore.models.ShoesViewModel
-import timber.log.Timber
 
 
 class ShoesListFragment : Fragment() {
@@ -38,7 +37,6 @@ class ShoesListFragment : Fragment() {
             // linear layout first (note: this is not the best way to implement a list view)
             binding.shoesListLayout.removeAllViews()
             for (item in it) {
-                Timber.i("$item")
                 val itemBinding: ListitemShoeBinding = DataBindingUtil.inflate(
                     inflater,
                     R.layout.listitem_shoe,

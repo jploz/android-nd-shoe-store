@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentAddShoeBinding
 import com.udacity.shoestore.models.ShoesViewModel
-import timber.log.Timber
 
 class AddShoeFragment : Fragment() {
 
@@ -28,7 +27,6 @@ class AddShoeFragment : Fragment() {
         binding.shoe = ShoesViewModel.makeShoeInstance()
 
         binding.saveBtn.setOnClickListener {
-            Timber.i("Save new shoe: ${binding.shoe}")
             model.addShoe(binding.shoe!!)
             findNavController().navigateUp()
         }
