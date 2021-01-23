@@ -50,4 +50,7 @@
         android:name="com.udacity.shoestore.screens.AddShoeFragment"
         android:label="@string/add_shoe_title"
         tools:layout="@layout/fragment_add_shoe" />
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment" />
 </navigation>

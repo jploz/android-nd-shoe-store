@@ -38,6 +38,10 @@ class ShoesViewModel : ViewModel() {
         _predefinedDataIsLoaded.value = false
         _shoes.forceRefresh()
     }
+
+    fun logoutUser() {
+        clearShoesList()
+    }
 }
 
 fun <T> MutableLiveData<T>.forceRefresh() {

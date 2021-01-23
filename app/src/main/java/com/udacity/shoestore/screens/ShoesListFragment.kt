@@ -78,6 +78,11 @@ class ShoesListFragment : Fragment() {
                 model.clearShoesList()
                 return true
             }
+            R.id.logoutUser -> {
+                model.logoutUser()
+                findNavController().navigate(R.id.action_global_loginFragment)
+                return true
+            }
         }
 
         return NavigationUI.onNavDestinationSelected(

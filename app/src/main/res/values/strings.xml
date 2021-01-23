@@ -24,6 +24,7 @@
     <string name="add_shoe_title">Add shoe</string>
     <string name="add_predefined_shoes_menu_label">Add predefined shoes</string>
     <string name="clear_shoe_inventory_menu_label">Clear shoe inventory</string>
+    <string name="logout_user_menu_label">Logout</string>
     <string name="not_avail">n.a.</string>
     <string name="shoes_list_empty_infotext">No shoes in inventory. Use \'Plus\' button to add a pair or load some predefined shoes using the entry in the overflow menu.</string>
 </resources>
