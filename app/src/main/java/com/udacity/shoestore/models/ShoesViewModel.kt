@@ -9,7 +9,8 @@ class ShoesViewModel : ViewModel() {
     private val _shoes = MutableLiveData<MutableList<Shoe>>()
     val shoes: LiveData<MutableList<Shoe>> = _shoes
 
-    var predefinedDataIsLoaded = false
+    private val _predefinedDataIsLoaded = MutableLiveData<Boolean>(false)
+    val predefinedDataIsLoaded: LiveData<Boolean> = _predefinedDataIsLoaded
 
     private val repository = FakeShoeRepository()
 
@@ -28,12 +29,13 @@ class ShoesViewModel : ViewModel() {
 
     fun addPredefinedShoes() {
         _shoes.value?.addAll(repository.getPredefinedShoes())
+        _predefinedDataIsLoaded.value = true
         _shoes.forceRefresh()
-        predefinedDataIsLoaded = true
     }
 
     fun clearShoesList() {
         _shoes.value?.clear()
+        _predefinedDataIsLoaded.value = false
         _shoes.forceRefresh()
     }
 }

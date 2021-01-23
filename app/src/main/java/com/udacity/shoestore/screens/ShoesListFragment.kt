@@ -17,6 +17,7 @@ import com.udacity.shoestore.models.ShoesViewModel
 class ShoesListFragment : Fragment() {
 
     private val model: ShoesViewModel by activityViewModels()
+    private var optionsMenu: Menu? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +26,10 @@ class ShoesListFragment : Fragment() {
         val binding: FragmentShoesListBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoes_list, container, false
         )
+
+        model.predefinedDataIsLoaded.observe(viewLifecycleOwner, {
+            setLoadPredefinedDataMenuItemStatus()
+        })
 
         model.shoes.observe(viewLifecycleOwner, {
             if (it.size > 0) {
@@ -59,14 +64,14 @@ class ShoesListFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.shoes_list_overflow_menu, menu)
-        menu.findItem(R.id.loadPredefinedData).isEnabled = !model.predefinedDataIsLoaded
+        optionsMenu = menu
+        setLoadPredefinedDataMenuItemStatus()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.loadPredefinedData -> {
                 model.addPredefinedShoes()
-                item.isEnabled = !model.predefinedDataIsLoaded
                 return true
             }
             R.id.clearShoeList -> {
@@ -79,5 +84,10 @@ class ShoesListFragment : Fragment() {
             item,
             requireView().findNavController()
         ) || super.onOptionsItemSelected(item)
+    }
+
+    private fun setLoadPredefinedDataMenuItemStatus() {
+        optionsMenu?.findItem(R.id.loadPredefinedData)?.isEnabled =
+            !model.predefinedDataIsLoaded.value!!
     }
 }
