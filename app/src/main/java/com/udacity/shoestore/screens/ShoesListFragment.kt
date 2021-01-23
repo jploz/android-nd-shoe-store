@@ -80,7 +80,7 @@ class ShoesListFragment : Fragment() {
             }
             R.id.logoutUser -> {
                 model.logoutUser()
-                findNavController().navigate(R.id.action_global_loginFragment)
+                findNavController().navigate(R.id.action_shoesListFragment_to_loginFragment)
                 return true
             }
         }

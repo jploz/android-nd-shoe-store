@@ -44,13 +44,15 @@
         <action
             android:id="@+id/action_shoesListFragment_to_shoeDetailFragment"
             app:destination="@id/shoeDetailFragment" />
+        <action
+            android:id="@+id/action_shoesListFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/shoesListFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"
         android:name="com.udacity.shoestore.screens.AddShoeFragment"
         android:label="@string/add_shoe_title"
         tools:layout="@layout/fragment_add_shoe" />
-    <action
-        android:id="@+id/action_global_loginFragment"
-        app:destination="@id/loginFragment" />
 </navigation>
