@@ -13,7 +13,9 @@ This app consists of five screens:
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/jploz/android-nd-shoe-store/main/Screenshot_1611408895.png" width="280"/><img src="https://raw.githubusercontent.com/jploz/android-nd-shoe-store/main/Screenshot_1611408971.png" width="280"/>
+<img src="https://raw.githubusercontent.com/jploz/android-nd-shoe-store/main/Screenshot_1611408895.png" width="240"/>
+
+<img src="https://raw.githubusercontent.com/jploz/android-nd-shoe-store/main/Screenshot_1611408971.png" width="240"/>
 
 
 ## Limitations
