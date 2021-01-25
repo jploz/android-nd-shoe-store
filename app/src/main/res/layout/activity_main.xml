@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ CoordinatorLayout, which is a super-powered FrameLayout, is used to provide the
+ top-level application chrome, here an app bar/toolbar. It is designed to properly
+ coordinates its child views and helps to implement interactions between the app bar
+ and the fragment container for example transition animations.
+-->
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,10 +13,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--
+     A Material app bar is implemented using an AppBarLayout as direct child of the parent
+     CoordinatorLayout. An AppBarLayout implements many of the features of material designs
+     app bar concept.
+     See ref.: https://material.io/components/app-bars-top/android#regular-top-app-bar
+    -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!--
+         Toolbar implements the actual toolbar which shows navigation items such as the
+         up button, title and overflow menu.
+         TBC: should a `com.google.android.material.appbar.MaterialToolbar` be used
+        -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -19,6 +37,12 @@
             app:title="Shoes" />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!--
+     In order to implement the one-activity design, a navigation host is needed. Here
+     the recommended FragmentContainerView is used which avoids some issues which the deprecated
+     way using a `fragment` element had.
+     See ref.: https://stackoverflow.com/a/59948595
+    -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"

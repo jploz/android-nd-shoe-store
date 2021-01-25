@@ -4,11 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".LoginFragment">
 
+    <!--
+     A ScrollView is used as top-level view to allow for scrolling if content
+     does not fit on screen (small resolution screen resp. landscape orientation).
+    -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
+        <!--
+         The layout itself is set up using a ConstraintLayout to avoid
+         nesting of child views.
+        -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
@@ -49,6 +57,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+            <!--
+             Each entry text field is using a Material TextInputLayout and a
+             corresponding TextInputEditText following the Material Design recommendations.
+            -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/emailTextField"
                 style="@style/Widget.ShoeStore.TextInputLayout"
@@ -93,6 +105,9 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!--
+             Material buttons are placed below the text fields using constraints.
+            -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login_btn"
                 style="@style/Widget.ShoeStore.Button"

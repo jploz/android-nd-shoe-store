@@ -4,10 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ShoesListFragment">
 
+    <!--
+     A ConstraintLayout acts as top-level view group and places an info text,
+     a ScrollView and a FAB on the screen.
+    -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--
+         This TextView into text will be only visible if the list of shoes is actually empty.
+        -->
         <TextView
             android:id="@+id/shoes_list_empty_text"
             android:layout_width="0dp"
@@ -22,6 +29,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- The ScrollView allows for scrolling through the list of shoes. -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -31,7 +39,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
+            <!--
+             As requested by the project specification, a LinearLayout is used as container for
+             list items (entries in the shoes list). The items will be added dynamically from code.
+            -->
             <LinearLayout
                 android:id="@+id/shoes_list_layout"
                 android:layout_width="match_parent"

@@ -10,6 +10,10 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!--
+     MaterialCardView provides a top-level wrapper view group in order to display each shoe item
+     as a card within the shoes list.
+    -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
@@ -20,6 +24,10 @@
         app:cardElevation="2dp"
         app:contentPadding="8dp">
 
+        <!--
+         The layout itself is set up using a ConstraintLayout to avoid
+         nesting of child views while providing a flexible layout.
+        -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

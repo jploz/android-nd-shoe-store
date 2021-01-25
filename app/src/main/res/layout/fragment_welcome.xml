@@ -3,11 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--
+     A ScrollView is used as top-level view to allow for scrolling if content
+     does not fit on screen (small resolution screen resp. landscape orientation).
+    -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
+        <!--
+         The screen layout itself is set up using a ConstraintLayout to avoid
+         nesting of child views.
+        -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/frameLayout2"
             android:layout_width="match_parent"
