@@ -13,15 +13,12 @@ This app consists of five screens:
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/jploz/android-nd-shoe-store/main/Screenshot_1611408895.png" width="240"/>
-
-<img src="https://raw.githubusercontent.com/jploz/android-nd-shoe-store/main/Screenshot_1611408971.png" width="240"/>
+<img src="https://raw.githubusercontent.com/jploz/android-nd-shoe-store/main/Screenshot_1611408895.png" width="240"/> <img src="https://raw.githubusercontent.com/jploz/android-nd-shoe-store/main/Screenshot_1611408971.png" width="240"/>
 
 
 ## Limitations
 
-The app follows the project requirements as stated in this [rubric](https://review.udacity.com/#!/rubrics/2849/view).
-
+The app follows the specified project requirements.
 Therefore, following elements of a real-world app are not implemented:
 
 - input validation of input fields
